@@ -287,7 +287,7 @@
   async function fetchGDELT() {
     const GDELT_URL = 'https://api.gdeltproject.org/api/v2/doc/doc' +
       '?query=war%20OR%20conflict%20OR%20military%20OR%20crisis' +
-      '&mode=timelinecountry&timespan=24h&format=json';
+      '&mode=artlist&maxrecords=250&timespan=24h&format=json';
 
     console.log('[GDELT] requesting:', GDELT_URL);
 
@@ -326,13 +326,13 @@
 
     console.log('[GDELT] parsed JSON:', raw);
     console.log('[GDELT] top-level keys:', Object.keys(raw));
-    console.log('[GDELT] has "timeline" key:', 'timeline' in raw);
-    console.log('[GDELT] timeline is array:', Array.isArray(raw.timeline));
-    if (Array.isArray(raw.timeline)) {
-      console.log('[GDELT] timeline.length:', raw.timeline.length);
-      if (raw.timeline.length > 0) {
-        console.log('[GDELT] timeline[0] sample:', raw.timeline[0]);
-        console.log('[GDELT] timeline[0] keys:', Object.keys(raw.timeline[0]));
+    console.log('[GDELT] has "articles" key:', 'articles' in raw);
+    console.log('[GDELT] articles is array:', Array.isArray(raw.articles));
+    if (Array.isArray(raw.articles)) {
+      console.log('[GDELT] articles.length:', raw.articles.length);
+      if (raw.articles.length > 0) {
+        console.log('[GDELT] articles[0] sample:', raw.articles[0]);
+        console.log('[GDELT] articles[0] keys:', Object.keys(raw.articles[0]));
       }
     }
 
@@ -353,38 +353,27 @@
   }
 
   function parseGDELT(raw) {
-    if (!raw || !Array.isArray(raw.timeline)) {
-      console.warn('[GDELT:parse] no timeline array — raw:', raw);
+    if (!raw || !Array.isArray(raw.articles)) {
+      console.warn('[GDELT:parse] no articles array — raw:', raw);
       return {};
     }
 
-    const totals = {}; // FIPS → sum
-
-    for (const entry of raw.timeline) {
-      if (!Array.isArray(entry.data)) continue;
-      // Shape A: country field on each data point
-      if (entry.data[0]?.country !== undefined) {
-        for (const pt of entry.data) {
-          if (pt.country) totals[pt.country] = (totals[pt.country] || 0) + (pt.value || 0);
-        }
-      } else {
-        // Shape B: country field on the entry itself
-        const fips = entry.country || entry.series || entry.label;
-        if (fips) {
-          for (const pt of entry.data) totals[fips] = (totals[fips] || 0) + (pt.value || 0);
-        }
-      }
+    // Count articles per source country (FIPS code)
+    const counts = {};
+    for (const article of raw.articles) {
+      const fips = article.sourcecountry;
+      if (fips) counts[fips] = (counts[fips] || 0) + 1;
     }
 
-    console.log('[GDELT:parse] FIPS totals (', Object.keys(totals).length, 'countries):', totals);
+    console.log('[GDELT:parse] article counts by FIPS (', Object.keys(counts).length, 'countries):', counts);
 
     // Map FIPS → ISO
     const isoTotals = {};
     const unmapped = [];
-    for (const [fips, val] of Object.entries(totals)) {
+    for (const [fips, count] of Object.entries(counts)) {
       const iso = FIPS_TO_ISO[fips];
       if (iso) {
-        isoTotals[iso] = (isoTotals[iso] || 0) + val;
+        isoTotals[iso] = (isoTotals[iso] || 0) + count;
       } else {
         unmapped.push(fips);
       }
