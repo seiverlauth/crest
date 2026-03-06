@@ -33,10 +33,11 @@
     header h1 { font-size: 14px; font-weight: 600; }
     header span { font-size: 12px; color: #999; }
 
-    #map-container { flex: 1; position: relative; }
+    #map-container { flex: 1; position: relative; overflow: hidden; }
     #map { width: 100%; height: 100%; }
     .leaflet-container { background: #fff !important; }
 
+    /* ── Detail panel ── */
     #panel {
       position: absolute;
       top: 12px; right: -320px;
@@ -52,7 +53,10 @@
       flex-direction: column;
       gap: 12px;
     }
-    #panel.open { right: 12px; }
+    #panel.open { right: 212px; }
+    @media (max-width: 640px) {
+      #panel.open { right: 12px; }
+    }
 
     #panel-close {
       align-self: flex-end;
@@ -74,6 +78,98 @@
       border-top: 1px solid #eee; padding-top: 12px;
     }
 
+    /* ── Rankings sidebar ── */
+    #rankings {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 200px;
+      background: #fff;
+      border-left: 1px solid #e8e8e8;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #rankings-header {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 10px;
+      font-weight: 600;
+      color: #aaa;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    #rankings-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .rank-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    .rank-row:hover { background: #fafafa; }
+
+    .rank-num {
+      font-size: 10px;
+      color: #ccc;
+      min-width: 16px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .rank-swatch {
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .rank-name {
+      flex: 1;
+      font-size: 12px;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .rank-score {
+      font-size: 11px;
+      color: #999;
+      min-width: 22px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ── Rankings toggle (small screens) ── */
+    #rankings-toggle {
+      display: none;
+      position: absolute;
+      top: 12px; right: 12px;
+      z-index: 950;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #555;
+      cursor: pointer;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 640px) {
+      #rankings { display: none; }
+      #rankings.visible { display: flex; width: 200px; }
+      #rankings-toggle { display: block; }
+    }
+
+    /* ── Legend ── */
     #legend {
       position: absolute;
       bottom: 20px; left: 16px;
@@ -133,6 +229,13 @@
     <div id="panel-desc">Select a country to view signal data.</div>
   </div>
 
+  <div id="rankings">
+    <div id="rankings-header">Signal Rank</div>
+    <div id="rankings-list"></div>
+  </div>
+
+  <button id="rankings-toggle">Rankings</button>
+
   <div id="legend">
     <div id="legend-label">Signal Level</div>
     <div id="legend-bar"></div>
@@ -148,12 +251,43 @@
   // ── Active scores: ISO alpha-2 → 0–100, populated from signals.json ────────
   let countryScores = {};
 
-  // ── Color scale: muted green → yellow → red ───────────────────────────────
+  // ── Color scale ───────────────────────────────────────────────────────────
   const colorScale = d3.scaleLinear()
     .domain([0, 25, 50, 75, 100])
     .range(['#e8edf2', '#a8b8cc', '#5878a0', '#2a4a7a', '#0a1628']);
 
   function scoreToColor(score) { return colorScale(score); }
+
+  // ── ISO alpha-2 → display name ─────────────────────────────────────────────
+  const ISO_A2_TO_NAME = {
+    AF:'Afghanistan', AL:'Albania', DZ:'Algeria', AO:'Angola', AR:'Argentina',
+    AM:'Armenia', AU:'Australia', AT:'Austria', AZ:'Azerbaijan', BD:'Bangladesh',
+    BY:'Belarus', BE:'Belgium', BO:'Bolivia', BA:'Bosnia', BR:'Brazil',
+    BG:'Bulgaria', KH:'Cambodia', CM:'Cameroon', CA:'Canada', CF:'Central African Rep.',
+    TD:'Chad', CL:'Chile', CN:'China', CO:'Colombia', CD:'Congo (DRC)',
+    HR:'Croatia', CU:'Cuba', CZ:'Czechia', DK:'Denmark', EC:'Ecuador',
+    EG:'Egypt', SV:'El Salvador', ER:'Eritrea', EE:'Estonia', ET:'Ethiopia',
+    FI:'Finland', FR:'France', PS:'Palestine', GE:'Georgia', DE:'Germany',
+    GH:'Ghana', GR:'Greece', GT:'Guatemala', GN:'Guinea', HT:'Haiti',
+    HN:'Honduras', HU:'Hungary', IN:'India', ID:'Indonesia', IR:'Iran',
+    IQ:'Iraq', IE:'Ireland', IL:'Israel', IT:'Italy', JP:'Japan',
+    JO:'Jordan', KZ:'Kazakhstan', KE:'Kenya', KP:'North Korea', KR:'South Korea',
+    KW:'Kuwait', KG:'Kyrgyzstan', LA:'Laos', LV:'Latvia', LB:'Lebanon',
+    LY:'Libya', LT:'Lithuania', MY:'Malaysia', ML:'Mali', MX:'Mexico',
+    MD:'Moldova', MN:'Mongolia', ME:'Montenegro', MA:'Morocco', MZ:'Mozambique',
+    MM:'Myanmar', NA:'Namibia', NP:'Nepal', NL:'Netherlands', NZ:'New Zealand',
+    NI:'Nicaragua', NE:'Niger', NG:'Nigeria', MK:'North Macedonia', NO:'Norway',
+    PK:'Pakistan', PA:'Panama', PY:'Paraguay', PE:'Peru', PH:'Philippines',
+    PL:'Poland', PT:'Portugal', QA:'Qatar', RO:'Romania', RU:'Russia',
+    RW:'Rwanda', SA:'Saudi Arabia', SN:'Senegal', RS:'Serbia', SL:'Sierra Leone',
+    SK:'Slovakia', SI:'Slovenia', SO:'Somalia', ZA:'South Africa', SS:'South Sudan',
+    ES:'Spain', LK:'Sri Lanka', SD:'Sudan', SE:'Sweden', CH:'Switzerland',
+    SY:'Syria', TW:'Taiwan', TJ:'Tajikistan', TZ:'Tanzania', TH:'Thailand',
+    TG:'Togo', TN:'Tunisia', TR:'Turkey', TM:'Turkmenistan', UG:'Uganda',
+    UA:'Ukraine', AE:'UAE', GB:'United Kingdom', US:'United States',
+    UY:'Uruguay', UZ:'Uzbekistan', VE:'Venezuela', VN:'Vietnam',
+    YE:'Yemen', ZM:'Zambia', ZW:'Zimbabwe',
+  };
 
   // ── Leaflet map init ───────────────────────────────────────────────────────
   const map = L.map('map', {
@@ -265,6 +399,7 @@
       countryScores = scores;
       console.log('countryScores', countryScores);
       if (geoLayer) geoLayer.setStyle(styleFeature);
+      renderRankings();
       if (data.updated) {
         document.getElementById('updated').textContent =
           'Updated ' + new Date(data.updated).toLocaleString();
@@ -274,6 +409,25 @@
     }
   }
 
+  // ── Rankings list ──────────────────────────────────────────────────────────
+  function renderRankings() {
+    const list = document.getElementById('rankings-list');
+    const sorted = Object.entries(countryScores).sort((a, b) => b[1] - a[1]);
+    list.innerHTML = '';
+    sorted.forEach(([iso, score], i) => {
+      const name = ISO_A2_TO_NAME[iso] || iso;
+      const row = document.createElement('div');
+      row.className = 'rank-row';
+      row.innerHTML =
+        '<span class="rank-num">' + (i + 1) + '</span>' +
+        '<span class="rank-swatch" style="background:' + scoreToColor(score) + '"></span>' +
+        '<span class="rank-name">' + name + '</span>' +
+        '<span class="rank-score">' + score + '</span>';
+      row.addEventListener('click', () => openPanelForCountry(iso, name, score));
+      list.appendChild(row);
+    });
+  }
+
   // ── Panel ──────────────────────────────────────────────────────────────────
   const panel        = document.getElementById('panel');
   const panelCountry = document.getElementById('panel-country');
@@ -281,31 +435,37 @@
   const panelFill    = document.getElementById('panel-score-fill');
   const panelDesc    = document.getElementById('panel-desc');
 
+  function openPanelForCountry(iso, name, score) {
+    panelCountry.textContent = name;
+    if (score != null) {
+      panelScore.textContent     = score;
+      panelScore.style.color     = scoreToColor(score);
+      panelFill.style.width      = score + '%';
+      panelFill.style.background = scoreToColor(score);
+      panelDesc.textContent      = 'News mention volume from RSS feeds, normalized 0–100 across all countries in the current window.';
+    } else {
+      panelScore.textContent     = '—';
+      panelScore.style.color     = '#111';
+      panelFill.style.width      = '0%';
+      panelDesc.textContent      = 'No signal data for this country in the current 24h window.';
+    }
+    panel.classList.add('open');
+  }
+
   function openPanel(feature) {
     const iso   = getCountryISO(feature);
-    const name  = feature.properties?.name || iso || 'Unknown';
+    const name  = ISO_A2_TO_NAME[iso] || iso || 'Unknown';
     const score = iso != null ? countryScores[iso] : undefined;
-
-    panelCountry.textContent = name;
-
-    if (score != null) {
-      panelScore.textContent    = score;
-      panelScore.style.color    = scoreToColor(score);
-      panelFill.style.width     = score + '%';
-      panelFill.style.background = scoreToColor(score);
-      panelDesc.textContent     = 'News mention volume from RSS feeds, normalized 0–100 across all countries in the current window.';
-    } else {
-      panelScore.textContent    = '—';
-      panelScore.style.color    = '#111';
-      panelFill.style.width     = '0%';
-      panelDesc.textContent     = 'No signal data for this country in the current 24h window.';
-    }
-
-    panel.classList.add('open');
+    openPanelForCountry(iso, name, score);
   }
 
   document.getElementById('panel-close').addEventListener('click', () => {
     panel.classList.remove('open');
+  });
+
+  // ── Rankings toggle (small screens) ───────────────────────────────────────
+  document.getElementById('rankings-toggle').addEventListener('click', () => {
+    document.getElementById('rankings').classList.toggle('visible');
   });
 </script>
 </body>
