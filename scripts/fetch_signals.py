@@ -179,32 +179,39 @@ _PATTERNS = [
 ]
 
 
-def mentions_in(text):
-    """Return list of ISO codes mentioned in text (duplicates included)."""
-    found = []
+def score_article(entry, feed_name):
+    """
+    Return list of (iso, weight, feed_name) for a single article.
+    Weights: title=3, first quarter of description=2, rest of description=1.
+    Each zone is checked independently — a country can accumulate from multiple zones.
+    """
+    title  = entry.get("title", "")
+    desc   = entry.get("summary", "") or entry.get("description", "")
+    cutoff = max(1, len(desc) // 4)
+    early  = desc[:cutoff]
+    late   = desc[cutoff:]
+
+    hits = []
     for pattern, iso in _PATTERNS:
-        for _ in pattern.finditer(text):
-            found.append(iso)
-    return found
+        if pattern.search(title):  hits.append((iso, 3, feed_name))
+        if pattern.search(early):  hits.append((iso, 2, feed_name))
+        if pattern.search(late):   hits.append((iso, 1, feed_name))
+    return hits
 
 
 def fetch_feed(name, url):
-    """Fetch one RSS feed, return flat list of ISO codes from all articles."""
-    codes = []
+    """Fetch one RSS feed, return list of (iso, weight, feed_name) tuples."""
+    hits = []
     try:
         feed = feedparser.parse(url)
         for entry in feed.entries:
-            text = " ".join([
-                entry.get("title", ""),
-                entry.get("summary", ""),
-                entry.get("description", ""),
-            ])
-            codes.extend(mentions_in(text))
-        print("  {}: {} articles, {} country mentions".format(
-            name, len(feed.entries), len(codes)))
+            hits.extend(score_article(entry, name))
+        total_weight = sum(w for _, w, _ in hits)
+        print("  {}: {} articles, {:.0f} weighted score units".format(
+            name, len(feed.entries), total_weight))
     except Exception as exc:
         print("  {}: FAILED — {}".format(name, exc), file=sys.stderr)
-    return codes
+    return hits
 
 
 def normalize(counts):
@@ -217,34 +224,38 @@ def normalize(counts):
 
 def main():
     print("Fetching feeds...")
-    all_codes = []
+    all_hits = []
     for name, url in FEEDS:
-        all_codes.extend(fetch_feed(name, url))
+        all_hits.extend(fetch_feed(name, url))
 
-    # Count mentions per country
-    counts = {}
-    for iso in all_codes:
-        counts[iso] = counts.get(iso, 0) + 1
+    # Accumulate weighted counts and sources per country
+    weighted_counts = {}
+    sources = {}
+    for iso, weight, feed_name in all_hits:
+        weighted_counts[iso] = weighted_counts.get(iso, 0) + weight
+        sources.setdefault(iso, set()).add(feed_name)
 
-    scores = normalize(counts)
+    scores = normalize(weighted_counts)
 
     # Write output
     out_path = Path(__file__).parent.parent / "data" / "signals.json"
     out_path.parent.mkdir(exist_ok=True)
     payload = {
         "updated": datetime.now(timezone.utc).isoformat(),
-        "scores": scores,
+        "scores":  scores,
+        "sources": {iso: sorted(feeds) for iso, feeds in sources.items()},
     }
     out_path.write_text(json.dumps(payload, indent=2))
 
     # Summary
-    print(f"\nDone. {len(counts)} countries scored.")
+    print("\nDone. {} countries scored.".format(len(scores)))
     top = sorted(scores.items(), key=lambda x: -x[1])[:10]
     print("Top 10:")
     for iso, score in top:
         bar = "█" * (score // 5)
-        print(f"  {iso}  {score:>3}  {bar}")
-    print(f"\nWrote {out_path}")
+        feeds = ", ".join(sources.get(iso, []))
+        print("  {}  {:>3}  {}  [{}]".format(iso, score, bar, feeds))
+    print("\nWrote {}".format(out_path))
 
 
 if __name__ == "__main__":

@@ -1,52 +1,234 @@
 {
-  "updated": "2026-03-06T06:43:36.201599+00:00",
+  "updated": "2026-03-06T06:45:39.278591+00:00",
   "scores": {
     "IR": 100,
-    "IN": 3,
-    "LB": 8,
-    "IL": 32,
+    "IN": 2,
+    "LB": 6,
+    "IL": 28,
     "RU": 7,
     "FR": 5,
-    "ES": 2,
-    "UA": 14,
+    "ES": 1,
+    "UA": 13,
     "PK": 5,
-    "AZ": 3,
-    "CN": 14,
-    "GB": 4,
+    "AZ": 2,
+    "CN": 13,
+    "GB": 3,
     "LK": 3,
     "EC": 1,
-    "KW": 4,
-    "GE": 1,
+    "KW": 3,
+    "GE": 0,
     "CU": 2,
-    "DK": 1,
-    "NP": 1,
-    "TW": 2,
-    "VE": 3,
-    "AE": 3,
+    "DK": 0,
+    "NP": 0,
+    "TW": 1,
+    "VE": 2,
+    "AE": 2,
     "HU": 2,
-    "QA": 2,
+    "QA": 1,
     "FI": 1,
-    "IQ": 4,
-    "TR": 2,
-    "MX": 1,
-    "GH": 1,
+    "IQ": 3,
+    "TR": 1,
+    "MX": 0,
+    "GH": 0,
     "SA": 1,
-    "YE": 1,
-    "AF": 2,
-    "CA": 2,
-    "SY": 1,
-    "PS": 2,
-    "NG": 2,
-    "DZ": 2,
+    "YE": 0,
+    "AF": 1,
+    "CA": 1,
+    "SY": 0,
+    "PS": 1,
+    "NG": 1,
+    "DZ": 1,
     "SD": 1,
-    "BR": 1,
+    "BR": 0,
+    "AT": 1,
     "US": 1,
-    "CH": 1,
-    "IS": 1,
-    "JP": 1,
-    "AT": 0,
+    "IS": 0,
     "AU": 0,
-    "ET": 0,
+    "ET": 1,
     "IT": 0
+  },
+  "sources": {
+    "IR": [
+      "AFP",
+      "AP",
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+    ],
+    "IN": [
+      "AP",
+      "Al Jazeera",
+      "Reuters"
+    ],
+    "LB": [
+      "AFP",
+      "AP",
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+    ],
+    "IL": [
+      "AFP",
+      "AP",
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+    ],
+    "RU": [
+      "AP",
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+    ],
+    "FR": [
+      "AP",
+      "Reuters"
+    ],
+    "ES": [
+      "AP"
+    ],
+    "UA": [
+      "AFP",
+      "AP",
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+    ],
+    "PK": [
+      "AFP",
+      "AP"
+    ],
+    "AZ": [
+      "AP",
+      "Al Jazeera",
+      "BBC",
+      "Reuters"
+    ],
+    "CN": [
+      "AFP",
+      "AP",
+      "BBC",
+      "Reuters"
+    ],
+    "GB": [
+      "AP",
+      "Reuters"
+    ],
+    "LK": [
+      "AFP",
+      "AP",
+      "Al Jazeera",
+      "Reuters"
+    ],
+    "EC": [
+      "AP",
+      "BBC"
+    ],
+    "KW": [
+      "AP",
+      "Al Jazeera",
+      "Reuters"
+    ],
+    "GE": [
+      "AP"
+    ],
+    "CU": [
+      "AP",
+      "Al Jazeera",
+      "Reuters"
+    ],
+    "DK": [
+      "AP"
+    ],
+    "NP": [
+      "Reuters"
+    ],
+    "TW": [
+      "Reuters"
+    ],
+    "VE": [
+      "BBC",
+      "Reuters"
+    ],
+    "AE": [
+      "Reuters"
+    ],
+    "HU": [
+      "BBC",
+      "Reuters"
+    ],
+    "QA": [
+      "Reuters"
+    ],
+    "FI": [
+      "BBC",
+      "Reuters"
+    ],
+    "IQ": [
+      "AFP",
+      "BBC",
+      "Reuters"
+    ],
+    "TR": [
+      "Reuters"
+    ],
+    "MX": [
+      "Reuters"
+    ],
+    "GH": [
+      "Reuters"
+    ],
+    "SA": [
+      "AFP",
+      "Al Jazeera"
+    ],
+    "YE": [
+      "AFP"
+    ],
+    "AF": [
+      "AFP"
+    ],
+    "CA": [
+      "AFP"
+    ],
+    "SY": [
+      "AFP"
+    ],
+    "PS": [
+      "AFP"
+    ],
+    "NG": [
+      "AFP"
+    ],
+    "DZ": [
+      "AFP"
+    ],
+    "SD": [
+      "AFP",
+      "BBC"
+    ],
+    "BR": [
+      "AFP"
+    ],
+    "AT": [
+      "AFP",
+      "BBC"
+    ],
+    "US": [
+      "AFP",
+      "Al Jazeera"
+    ],
+    "IS": [
+      "AFP"
+    ],
+    "AU": [
+      "BBC"
+    ],
+    "ET": [
+      "BBC"
+    ],
+    "IT": [
+      "BBC"
+    ]
   }
 }
