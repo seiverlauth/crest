@@ -47,6 +47,13 @@ LAYER_WEIGHTS = {
     "government": 3,
 }
 
+# Minimum raw mention count to enter a layer's scores
+LAYER_THRESHOLDS = {
+    "wire":       3,
+    "think_tank": 2,
+    "government": 3,
+}
+
 # ── Country name → ISO alpha-2 ─────────────────────────────────────────────────
 COUNTRY_NAMES = {
     "Afghanistan": "AF",
@@ -249,8 +256,11 @@ def hits_to_scores(hits, label=""):
         top = sorted(weighted_counts.items(), key=lambda x: -x[1])[:10]
         print("  raw counts ({}): {}".format(
             label, ", ".join("{}={:.1f}".format(iso, v) for iso, v in top)))
-    scores = normalize(weighted_counts)
-    sources_sorted = {iso: sorted(feeds) for iso, feeds in sources.items()}
+    threshold = LAYER_THRESHOLDS.get(label, 0)
+    filtered = {iso: v for iso, v in weighted_counts.items() if v >= threshold}
+    print("  {} countries above threshold ({})".format(len(filtered), threshold))
+    scores = normalize(filtered)
+    sources_sorted = {iso: sorted(feeds) for iso, feeds in sources.items() if iso in filtered}
     return scores, sources_sorted
 
 

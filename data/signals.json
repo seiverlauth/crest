@@ -1,218 +1,58 @@
 {
-  "updated": "2026-03-06T07:40:00.995080+00:00",
+  "updated": "2026-03-06T07:47:38.615713+00:00",
   "layers": {
     "wire": {
-      "EC": 1,
-      "GE": 3,
-      "DK": 5,
-      "NP": 7,
-      "VN": 10,
-      "MX": 12,
-      "GH": 14,
-      "YE": 16,
-      "SY": 18,
-      "SD": 20,
-      "BR": 23,
-      "US": 25,
-      "CH": 27,
-      "IS": 29,
-      "JP": 31,
-      "AU": 33,
-      "IT": 35,
-      "IN": 38,
-      "ES": 40,
-      "TW": 42,
-      "QA": 44,
-      "FI": 46,
-      "TR": 48,
-      "SA": 51,
-      "AF": 53,
-      "CA": 55,
-      "PS": 57,
-      "NG": 59,
-      "DZ": 61,
-      "ET": 63,
-      "AZ": 66,
-      "LK": 68,
-      "CU": 70,
-      "VE": 72,
-      "AE": 74,
-      "HU": 76,
-      "IQ": 78,
-      "GB": 81,
-      "KW": 83,
-      "FR": 85,
-      "PK": 87,
-      "RU": 89,
-      "LB": 91,
-      "UA": 94,
-      "CN": 96,
-      "IL": 98,
+      "AZ": 1,
+      "CU": 7,
+      "VE": 13,
+      "AE": 20,
+      "HU": 26,
+      "IQ": 32,
+      "GB": 38,
+      "LK": 44,
+      "KW": 51,
+      "FR": 57,
+      "PK": 63,
+      "RU": 69,
+      "LB": 75,
+      "CN": 81,
+      "UA": 88,
+      "IL": 94,
       "IR": 100
     },
     "think_tank": {
-      "AF": 1,
-      "PK": 5,
-      "NE": 9,
-      "TR": 13,
-      "DE": 17,
-      "TW": 21,
-      "HN": 25,
-      "VE": 29,
-      "SD": 33,
-      "US": 37,
-      "NP": 41,
-      "SA": 45,
-      "GN": 49,
-      "LT": 52,
-      "CO": 56,
-      "PH": 60,
-      "TN": 64,
-      "LY": 68,
-      "SY": 72,
-      "JP": 76,
-      "MX": 80,
-      "CN": 84,
-      "IL": 88,
-      "RU": 92,
-      "UA": 96,
+      "MX": 1,
+      "CN": 21,
+      "IL": 41,
+      "RU": 60,
+      "UA": 80,
       "IR": 100
     },
     "government": {
-      "KG": 1,
-      "PS": 2,
-      "PK": 2,
-      "JO": 3,
-      "LB": 4,
-      "MY": 5,
-      "SK": 5,
-      "UZ": 6,
-      "BD": 7,
-      "PT": 8,
-      "UG": 8,
-      "TW": 9,
-      "TZ": 10,
-      "GR": 11,
-      "RO": 11,
-      "LK": 12,
-      "EC": 13,
-      "HR": 14,
-      "SL": 14,
-      "NP": 15,
-      "IN": 16,
-      "MZ": 17,
-      "PL": 17,
-      "KR": 18,
-      "IT": 19,
-      "PH": 19,
-      "UY": 20,
-      "ID": 21,
-      "MA": 22,
-      "RS": 22,
-      "GH": 23,
-      "SV": 24,
-      "TL": 25,
-      "TM": 25,
-      "NO": 26,
-      "MN": 27,
-      "MK": 28,
-      "AL": 28,
-      "GT": 29,
-      "NA": 30,
-      "NI": 31,
-      "BA": 31,
-      "HN": 32,
-      "XK": 33,
-      "MD": 34,
-      "ME": 34,
-      "LA": 35,
-      "PA": 36,
-      "LV": 36,
-      "AT": 37,
-      "IS": 38,
-      "HU": 39,
-      "FI": 39,
-      "LT": 40,
-      "KZ": 41,
-      "SI": 42,
-      "EE": 42,
-      "ZM": 43,
-      "ET": 44,
-      "ZW": 45,
-      "EG": 45,
-      "GB": 46,
-      "NL": 47,
-      "CH": 48,
-      "BE": 48,
-      "DE": 49,
-      "AO": 50,
-      "TG": 51,
-      "TR": 51,
-      "CU": 52,
-      "MX": 53,
-      "AF": 53,
-      "TJ": 54,
-      "SS": 55,
-      "ZA": 56,
-      "NZ": 56,
-      "AU": 57,
-      "CL": 58,
-      "AM": 59,
-      "AZ": 59,
-      "KH": 60,
-      "RW": 61,
-      "PY": 62,
-      "BO": 62,
-      "PE": 63,
-      "IE": 64,
-      "GE": 65,
-      "KE": 65,
-      "VN": 66,
-      "DK": 67,
-      "SE": 67,
-      "IL": 68,
-      "KP": 69,
-      "HT": 70,
-      "OM": 70,
-      "IQ": 71,
-      "TD": 72,
-      "SN": 73,
-      "CF": 73,
-      "CM": 74,
-      "CZ": 75,
-      "NG": 76,
-      "BY": 76,
-      "BR": 77,
-      "TH": 78,
-      "TN": 79,
-      "DZ": 79,
-      "SO": 80,
-      "ES": 81,
-      "ER": 82,
-      "FR": 82,
-      "CA": 83,
-      "BG": 84,
-      "UA": 84,
-      "YE": 85,
-      "ML": 86,
-      "CO": 87,
-      "LY": 87,
-      "MM": 88,
-      "AR": 89,
-      "QA": 90,
-      "SA": 90,
-      "VE": 91,
-      "RU": 92,
-      "JP": 93,
-      "SY": 93,
-      "NE": 94,
-      "AE": 95,
-      "SD": 96,
-      "CD": 96,
-      "CN": 97,
-      "KW": 98,
-      "GN": 99,
-      "IR": 99,
+      "FR": 1,
+      "CA": 5,
+      "BG": 9,
+      "UA": 13,
+      "YE": 17,
+      "ML": 22,
+      "LY": 26,
+      "MM": 30,
+      "AR": 34,
+      "QA": 38,
+      "SA": 42,
+      "VE": 46,
+      "RU": 51,
+      "JP": 55,
+      "SY": 59,
+      "NE": 63,
+      "CO": 67,
+      "AE": 71,
+      "SD": 75,
+      "CD": 79,
+      "CN": 83,
+      "KW": 88,
+      "GN": 92,
+      "IR": 96,
       "US": 100
     }
   },
@@ -230,10 +70,6 @@
         "BBC",
         "Reuters"
       ],
-      "IN": [
-        "AP",
-        "Reuters"
-      ],
       "LB": [
         "AFP",
         "AP",
@@ -256,9 +92,6 @@
       "FR": [
         "AP",
         "Reuters"
-      ],
-      "ES": [
-        "AP"
       ],
       "UA": [
         "AFP",
@@ -285,29 +118,14 @@
         "AP",
         "Reuters"
       ],
-      "EC": [
-        "AP"
-      ],
       "KW": [
         "AP",
         "Al Jazeera",
         "Reuters"
       ],
-      "GE": [
-        "AP"
-      ],
       "CU": [
         "AP",
         "Al Jazeera",
-        "Reuters"
-      ],
-      "DK": [
-        "AP"
-      ],
-      "NP": [
-        "Reuters"
-      ],
-      "TW": [
         "Reuters"
       ],
       "VE": [
@@ -321,80 +139,9 @@
         "BBC",
         "Reuters"
       ],
-      "VN": [
-        "Reuters"
-      ],
-      "QA": [
-        "Reuters"
-      ],
-      "FI": [
-        "BBC",
-        "Reuters"
-      ],
       "IQ": [
         "AFP",
         "Reuters"
-      ],
-      "TR": [
-        "Reuters"
-      ],
-      "MX": [
-        "Reuters"
-      ],
-      "GH": [
-        "Reuters"
-      ],
-      "SA": [
-        "AFP",
-        "Al Jazeera"
-      ],
-      "YE": [
-        "AFP"
-      ],
-      "AF": [
-        "AFP"
-      ],
-      "CA": [
-        "AFP"
-      ],
-      "SY": [
-        "AFP"
-      ],
-      "PS": [
-        "AFP"
-      ],
-      "NG": [
-        "AFP"
-      ],
-      "DZ": [
-        "AFP"
-      ],
-      "SD": [
-        "AFP"
-      ],
-      "BR": [
-        "AFP"
-      ],
-      "US": [
-        "AFP"
-      ],
-      "CH": [
-        "AFP"
-      ],
-      "IS": [
-        "AFP"
-      ],
-      "JP": [
-        "AFP"
-      ],
-      "AU": [
-        "BBC"
-      ],
-      "ET": [
-        "BBC"
-      ],
-      "IT": [
-        "BBC"
       ]
     },
     "think_tank": {
@@ -410,70 +157,10 @@
       "RU": [
         "Atlantic Council"
       ],
-      "AF": [
-        "Atlantic Council"
-      ],
-      "PK": [
-        "Atlantic Council"
-      ],
       "IL": [
         "Atlantic Council"
       ],
-      "NE": [
-        "Atlantic Council"
-      ],
-      "TR": [
-        "Atlantic Council"
-      ],
       "MX": [
-        "Atlantic Council"
-      ],
-      "DE": [
-        "Atlantic Council"
-      ],
-      "TW": [
-        "Atlantic Council"
-      ],
-      "HN": [
-        "Atlantic Council"
-      ],
-      "VE": [
-        "Atlantic Council"
-      ],
-      "SD": [
-        "Atlantic Council"
-      ],
-      "US": [
-        "Atlantic Council"
-      ],
-      "NP": [
-        "Atlantic Council"
-      ],
-      "SA": [
-        "Atlantic Council"
-      ],
-      "GN": [
-        "Atlantic Council"
-      ],
-      "LT": [
-        "Atlantic Council"
-      ],
-      "CO": [
-        "Atlantic Council"
-      ],
-      "PH": [
-        "Atlantic Council"
-      ],
-      "TN": [
-        "Atlantic Council"
-      ],
-      "LY": [
-        "Atlantic Council"
-      ],
-      "SY": [
-        "Atlantic Council"
-      ],
-      "JP": [
         "Atlantic Council"
       ]
     },
@@ -487,39 +174,7 @@
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
-      "EG": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
       "CD": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "GB": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "NL": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "CH": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "BE": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "DK": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "DE": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
-      "AO": [
         "State Dept Press Releases",
         "State Dept Travel Advisories"
       ],
@@ -528,17 +183,9 @@
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
-      "SE": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
       "QA": [
         "State Dept Press Releases",
         "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "TG": [
-        "State Dept Press Releases",
         "State Dept Travel Advisories"
       ],
       "KW": [
@@ -561,25 +208,12 @@
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
-      "IL": [
-        "State Dept Press Releases",
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "TR": [
-        "State Dept Press Releases",
-        "State Dept Travel Advisories"
-      ],
       "IR": [
         "State Dept Press Releases",
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
       "BG": [
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "KP": [
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
@@ -599,605 +233,111 @@
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
-      "HT": [
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
       "JP": [
         "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "CU": [
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "MX": [
-        "State Dept Sec Remarks",
-        "State Dept Travel Advisories"
-      ],
-      "PS": [
-        "State Dept Sec Remarks"
-      ],
-      "PK": [
         "State Dept Travel Advisories"
       ],
       "YE": [
         "State Dept Travel Advisories"
       ],
-      "OM": [
-        "State Dept Travel Advisories"
-      ],
-      "JO": [
-        "State Dept Travel Advisories"
-      ],
       "SY": [
-        "State Dept Travel Advisories"
-      ],
-      "IQ": [
         "State Dept Travel Advisories"
       ],
       "GN": [
         "State Dept Travel Advisories"
       ],
-      "LB": [
-        "State Dept Travel Advisories"
-      ],
-      "MY": [
-        "State Dept Travel Advisories"
-      ],
-      "AF": [
-        "State Dept Travel Advisories"
-      ],
       "ML": [
-        "State Dept Travel Advisories"
-      ],
-      "SK": [
-        "State Dept Travel Advisories"
-      ],
-      "KG": [
-        "State Dept Travel Advisories"
-      ],
-      "TJ": [
         "State Dept Travel Advisories"
       ],
       "NE": [
         "State Dept Travel Advisories"
       ],
-      "TD": [
-        "State Dept Travel Advisories"
-      ],
-      "UZ": [
-        "State Dept Travel Advisories"
-      ],
-      "BD": [
-        "State Dept Travel Advisories"
-      ],
-      "SN": [
-        "State Dept Travel Advisories"
-      ],
-      "CF": [
-        "State Dept Travel Advisories"
-      ],
-      "CM": [
-        "State Dept Travel Advisories"
-      ],
-      "CZ": [
-        "State Dept Travel Advisories"
-      ],
-      "NG": [
-        "State Dept Travel Advisories"
-      ],
-      "BY": [
-        "State Dept Travel Advisories"
-      ],
-      "PT": [
-        "State Dept Travel Advisories"
-      ],
-      "UG": [
-        "State Dept Travel Advisories"
-      ],
       "CO": [
-        "State Dept Travel Advisories"
-      ],
-      "BR": [
-        "State Dept Travel Advisories"
-      ],
-      "TW": [
-        "State Dept Travel Advisories"
-      ],
-      "SS": [
         "State Dept Travel Advisories"
       ],
       "SD": [
         "State Dept Travel Advisories"
       ],
-      "TZ": [
-        "State Dept Travel Advisories"
-      ],
-      "GR": [
-        "State Dept Travel Advisories"
-      ],
-      "RO": [
-        "State Dept Travel Advisories"
-      ],
-      "LK": [
-        "State Dept Travel Advisories"
-      ],
-      "EC": [
-        "State Dept Travel Advisories"
-      ],
-      "HR": [
-        "State Dept Travel Advisories"
-      ],
-      "ZA": [
-        "State Dept Travel Advisories"
-      ],
-      "NZ": [
-        "State Dept Travel Advisories"
-      ],
-      "AU": [
-        "State Dept Travel Advisories"
-      ],
-      "CL": [
-        "State Dept Travel Advisories"
-      ],
-      "SL": [
-        "State Dept Travel Advisories"
-      ],
-      "NP": [
-        "State Dept Travel Advisories"
-      ],
-      "AM": [
-        "State Dept Travel Advisories"
-      ],
-      "AZ": [
-        "State Dept Travel Advisories"
-      ],
-      "KH": [
-        "State Dept Travel Advisories"
-      ],
-      "TH": [
-        "State Dept Travel Advisories"
-      ],
-      "RW": [
-        "State Dept Travel Advisories"
-      ],
       "LY": [
         "State Dept Travel Advisories"
       ],
-      "TN": [
-        "State Dept Travel Advisories"
-      ],
-      "DZ": [
-        "State Dept Travel Advisories"
-      ],
-      "IN": [
-        "State Dept Travel Advisories"
-      ],
-      "MZ": [
-        "State Dept Travel Advisories"
-      ],
-      "PL": [
-        "State Dept Travel Advisories"
-      ],
-      "PY": [
-        "State Dept Travel Advisories"
-      ],
-      "BO": [
-        "State Dept Travel Advisories"
-      ],
-      "PE": [
-        "State Dept Travel Advisories"
-      ],
-      "KR": [
-        "State Dept Travel Advisories"
-      ],
-      "IT": [
-        "State Dept Travel Advisories"
-      ],
-      "SO": [
-        "State Dept Travel Advisories"
-      ],
-      "ES": [
-        "State Dept Travel Advisories"
-      ],
       "MM": [
-        "State Dept Travel Advisories"
-      ],
-      "IE": [
-        "State Dept Travel Advisories"
-      ],
-      "PH": [
-        "State Dept Travel Advisories"
-      ],
-      "UY": [
-        "State Dept Travel Advisories"
-      ],
-      "ID": [
-        "State Dept Travel Advisories"
-      ],
-      "GE": [
-        "State Dept Travel Advisories"
-      ],
-      "MA": [
-        "State Dept Travel Advisories"
-      ],
-      "RS": [
-        "State Dept Travel Advisories"
-      ],
-      "GH": [
-        "State Dept Travel Advisories"
-      ],
-      "SV": [
-        "State Dept Travel Advisories"
-      ],
-      "TL": [
-        "State Dept Travel Advisories"
-      ],
-      "KE": [
-        "State Dept Travel Advisories"
-      ],
-      "ER": [
-        "State Dept Travel Advisories"
-      ],
-      "TM": [
-        "State Dept Travel Advisories"
-      ],
-      "NO": [
-        "State Dept Travel Advisories"
-      ],
-      "MN": [
-        "State Dept Travel Advisories"
-      ],
-      "MK": [
-        "State Dept Travel Advisories"
-      ],
-      "AL": [
-        "State Dept Travel Advisories"
-      ],
-      "GT": [
-        "State Dept Travel Advisories"
-      ],
-      "NA": [
-        "State Dept Travel Advisories"
-      ],
-      "VN": [
-        "State Dept Travel Advisories"
-      ],
-      "NI": [
-        "State Dept Travel Advisories"
-      ],
-      "BA": [
-        "State Dept Travel Advisories"
-      ],
-      "HN": [
-        "State Dept Travel Advisories"
-      ],
-      "XK": [
-        "State Dept Travel Advisories"
-      ],
-      "MD": [
-        "State Dept Travel Advisories"
-      ],
-      "ME": [
-        "State Dept Travel Advisories"
-      ],
-      "LA": [
-        "State Dept Travel Advisories"
-      ],
-      "PA": [
-        "State Dept Travel Advisories"
-      ],
-      "LV": [
-        "State Dept Travel Advisories"
-      ],
-      "AT": [
-        "State Dept Travel Advisories"
-      ],
-      "IS": [
-        "State Dept Travel Advisories"
-      ],
-      "HU": [
-        "State Dept Travel Advisories"
-      ],
-      "FI": [
-        "State Dept Travel Advisories"
-      ],
-      "LT": [
-        "State Dept Travel Advisories"
-      ],
-      "KZ": [
-        "State Dept Travel Advisories"
-      ],
-      "SI": [
-        "State Dept Travel Advisories"
-      ],
-      "EE": [
-        "State Dept Travel Advisories"
-      ],
-      "ZM": [
-        "State Dept Travel Advisories"
-      ],
-      "ET": [
-        "State Dept Travel Advisories"
-      ],
-      "ZW": [
         "State Dept Travel Advisories"
       ]
     }
   },
   "composite": {
-    "KG": 1,
-    "JO": 2,
-    "MY": 2,
-    "SK": 3,
-    "UZ": 4,
-    "BD": 5,
-    "UG": 5,
-    "PT": 6,
-    "TZ": 7,
-    "RO": 8,
-    "GR": 8,
-    "EC": 9,
-    "HR": 10,
-    "SL": 11,
-    "PL": 11,
-    "MZ": 12,
-    "KR": 13,
-    "UY": 14,
-    "PS": 14,
-    "ID": 15,
-    "RS": 16,
-    "MA": 17,
-    "SV": 17,
-    "TM": 18,
-    "TL": 19,
-    "NO": 19,
-    "MN": 20,
-    "GH": 21,
-    "AL": 22,
-    "MK": 22,
-    "IN": 23,
-    "GT": 24,
-    "NA": 25,
-    "IT": 25,
-    "NI": 26,
-    "BA": 27,
-    "XK": 28,
-    "MD": 28,
-    "ME": 29,
-    "LB": 30,
-    "PK": 31,
-    "LK": 31,
-    "LA": 32,
-    "PA": 33,
-    "LV": 34,
-    "AT": 34,
-    "TW": 35,
-    "KZ": 36,
-    "SI": 36,
-    "EE": 37,
-    "ZM": 38,
-    "NP": 39,
-    "EG": 39,
-    "ZW": 40,
-    "NL": 41,
-    "IS": 42,
-    "BE": 42,
-    "HN": 43,
-    "AO": 44,
-    "TG": 45,
-    "TJ": 45,
-    "FI": 46,
-    "SS": 47,
-    "ZA": 48,
-    "NZ": 48,
-    "CH": 49,
-    "CL": 50,
-    "PH": 51,
-    "AM": 51,
-    "KH": 52,
-    "DE": 53,
-    "RW": 53,
-    "PY": 54,
-    "BO": 55,
-    "PE": 56,
-    "IE": 56,
-    "HU": 57,
-    "ET": 58,
-    "KE": 59,
-    "GE": 59,
-    "SE": 60,
-    "AU": 61,
-    "DK": 62,
-    "KP": 62,
-    "VN": 63,
-    "OM": 64,
-    "HT": 65,
-    "AF": 65,
-    "TD": 66,
-    "CF": 67,
-    "SN": 67,
-    "GB": 68,
-    "CM": 69,
-    "LT": 70,
-    "CZ": 70,
-    "CU": 71,
-    "TR": 72,
-    "BY": 73,
-    "TH": 73,
-    "SO": 74,
-    "AZ": 75,
-    "ER": 76,
-    "BG": 76,
-    "BR": 77,
-    "ML": 78,
-    "MM": 79,
-    "AR": 79,
-    "YE": 80,
-    "ES": 81,
-    "NG": 82,
-    "CD": 82,
-    "IQ": 83,
-    "DZ": 84,
-    "NE": 84,
-    "CA": 85,
-    "QA": 86,
-    "MX": 87,
-    "FR": 87,
-    "AE": 88,
-    "TN": 89,
-    "CO": 90,
-    "SD": 90,
+    "AZ": 1,
+    "MX": 4,
+    "CU": 7,
+    "CA": 10,
+    "HU": 13,
+    "BG": 16,
+    "IQ": 18,
+    "GB": 21,
+    "LK": 24,
+    "YE": 27,
+    "FR": 30,
+    "PK": 33,
+    "ML": 36,
+    "LB": 39,
+    "LY": 42,
+    "MM": 45,
+    "AR": 48,
+    "QA": 51,
+    "SA": 53,
+    "VE": 56,
+    "JP": 59,
+    "IL": 62,
+    "SY": 65,
+    "NE": 68,
+    "CO": 71,
+    "SD": 74,
+    "AE": 77,
+    "CD": 80,
+    "GN": 83,
+    "UA": 85,
+    "US": 88,
     "KW": 91,
-    "GN": 92,
-    "LY": 93,
-    "US": 93,
-    "VE": 94,
-    "SA": 95,
-    "SY": 96,
-    "JP": 96,
-    "IL": 97,
-    "UA": 98,
-    "RU": 99,
-    "CN": 99,
+    "RU": 94,
+    "CN": 97,
     "IR": 100
   },
   "scores": {
-    "KG": 1,
-    "JO": 2,
-    "MY": 2,
-    "SK": 3,
-    "UZ": 4,
-    "BD": 5,
-    "UG": 5,
-    "PT": 6,
-    "TZ": 7,
-    "RO": 8,
-    "GR": 8,
-    "EC": 9,
-    "HR": 10,
-    "SL": 11,
-    "PL": 11,
-    "MZ": 12,
-    "KR": 13,
-    "UY": 14,
-    "PS": 14,
-    "ID": 15,
-    "RS": 16,
-    "MA": 17,
-    "SV": 17,
-    "TM": 18,
-    "TL": 19,
-    "NO": 19,
-    "MN": 20,
-    "GH": 21,
-    "AL": 22,
-    "MK": 22,
-    "IN": 23,
-    "GT": 24,
-    "NA": 25,
-    "IT": 25,
-    "NI": 26,
-    "BA": 27,
-    "XK": 28,
-    "MD": 28,
-    "ME": 29,
-    "LB": 30,
-    "PK": 31,
-    "LK": 31,
-    "LA": 32,
-    "PA": 33,
-    "LV": 34,
-    "AT": 34,
-    "TW": 35,
-    "KZ": 36,
-    "SI": 36,
-    "EE": 37,
-    "ZM": 38,
-    "NP": 39,
-    "EG": 39,
-    "ZW": 40,
-    "NL": 41,
-    "IS": 42,
-    "BE": 42,
-    "HN": 43,
-    "AO": 44,
-    "TG": 45,
-    "TJ": 45,
-    "FI": 46,
-    "SS": 47,
-    "ZA": 48,
-    "NZ": 48,
-    "CH": 49,
-    "CL": 50,
-    "PH": 51,
-    "AM": 51,
-    "KH": 52,
-    "DE": 53,
-    "RW": 53,
-    "PY": 54,
-    "BO": 55,
-    "PE": 56,
-    "IE": 56,
-    "HU": 57,
-    "ET": 58,
-    "KE": 59,
-    "GE": 59,
-    "SE": 60,
-    "AU": 61,
-    "DK": 62,
-    "KP": 62,
-    "VN": 63,
-    "OM": 64,
-    "HT": 65,
-    "AF": 65,
-    "TD": 66,
-    "CF": 67,
-    "SN": 67,
-    "GB": 68,
-    "CM": 69,
-    "LT": 70,
-    "CZ": 70,
-    "CU": 71,
-    "TR": 72,
-    "BY": 73,
-    "TH": 73,
-    "SO": 74,
-    "AZ": 75,
-    "ER": 76,
-    "BG": 76,
-    "BR": 77,
-    "ML": 78,
-    "MM": 79,
-    "AR": 79,
-    "YE": 80,
-    "ES": 81,
-    "NG": 82,
-    "CD": 82,
-    "IQ": 83,
-    "DZ": 84,
-    "NE": 84,
-    "CA": 85,
-    "QA": 86,
-    "MX": 87,
-    "FR": 87,
-    "AE": 88,
-    "TN": 89,
-    "CO": 90,
-    "SD": 90,
+    "AZ": 1,
+    "MX": 4,
+    "CU": 7,
+    "CA": 10,
+    "HU": 13,
+    "BG": 16,
+    "IQ": 18,
+    "GB": 21,
+    "LK": 24,
+    "YE": 27,
+    "FR": 30,
+    "PK": 33,
+    "ML": 36,
+    "LB": 39,
+    "LY": 42,
+    "MM": 45,
+    "AR": 48,
+    "QA": 51,
+    "SA": 53,
+    "VE": 56,
+    "JP": 59,
+    "IL": 62,
+    "SY": 65,
+    "NE": 68,
+    "CO": 71,
+    "SD": 74,
+    "AE": 77,
+    "CD": 80,
+    "GN": 83,
+    "UA": 85,
+    "US": 88,
     "KW": 91,
-    "GN": 92,
-    "LY": 93,
-    "US": 93,
-    "VE": 94,
-    "SA": 95,
-    "SY": 96,
-    "JP": 96,
-    "IL": 97,
-    "UA": 98,
-    "RU": 99,
-    "CN": 99,
+    "RU": 94,
+    "CN": 97,
     "IR": 100
   }
 }
