@@ -34,7 +34,8 @@ jobs:
             echo "No changes to signals.json, skipping commit."
           else
             git commit -m "update signals [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
