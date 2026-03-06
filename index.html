@@ -419,7 +419,7 @@
     const iso = getCountryISO(feature);
     const score = iso != null ? countryScores[iso] : undefined;
     return {
-      fillColor: score != null ? scoreToColor(score) : '#efefef',
+      fillColor: (score != null && score > 0) ? scoreToColor(score) : '#efefef',
       fillOpacity: 1,
       color: '#ccc',
       weight: 0.5,
@@ -437,12 +437,12 @@
             const score = iso != null ? countryScores[iso] : undefined;
             const name  = ISO_A2_TO_NAME[iso] || iso || '';
             e.target.setStyle({
-              fillColor: score != null ? scoreToColor(score) : '#e0e0e0',
+              fillColor: (score != null && score > 0) ? scoreToColor(score) : '#e0e0e0',
               weight: 1.5,
               color: '#888',
             });
             const tip = document.getElementById('tooltip');
-            tip.textContent = score != null ? name + ' · ' + score : name;
+            tip.textContent = (score != null && score > 0) ? name + ' · ' + score : name;
             tip.style.display = 'block';
           },
           mouseout(e) {
@@ -532,7 +532,8 @@
   function openPanel(feature) {
     const iso   = getCountryISO(feature);
     const name  = ISO_A2_TO_NAME[iso] || iso || 'Unknown';
-    const score = iso != null ? countryScores[iso] : undefined;
+    const raw   = iso != null ? countryScores[iso] : undefined;
+    const score = (raw != null && raw > 0) ? raw : undefined;
     openPanelForCountry(iso, name, score);
   }
 
