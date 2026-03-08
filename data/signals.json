@@ -1,25 +1,26 @@
 {
-  "updated": "2026-03-07T23:46:13.639709+00:00",
+  "updated": "2026-03-08T02:23:20.976646+00:00",
   "layers": {
     "wire": {
+      "RU": 8,
+      "IR": 100,
       "HU": 0,
       "UA": 31,
-      "RU": 14,
-      "IR": 100,
-      "CN": 28,
-      "IL": 66,
+      "IL": 69,
       "LK": 14,
-      "LB": 31,
-      "IN": 24,
+      "LB": 35,
+      "IN": 19,
+      "CN": 28,
       "PK": 14,
-      "CU": 28,
       "AF": 0,
       "VE": 8,
       "FR": 8,
-      "PS": 24,
+      "PS": 28,
+      "CU": 14,
       "TR": 0,
-      "US": 0,
-      "CA": 0
+      "US": 14,
+      "CA": 0,
+      "GB": 0
     },
     "think_tank": {
       "IR": 100,
@@ -32,50 +33,38 @@
     "government": {
       "SV": 0,
       "CL": 5,
-      "AR": 13,
+      "AR": 12,
       "US": 100,
       "AZ": 5,
-      "IR": 39,
+      "IR": 36,
       "AE": 9,
       "SA": 0,
-      "KW": 17,
+      "KW": 16,
       "QA": 0,
       "OM": 5,
       "KP": 0,
-      "RU": 9,
-      "CN": 27,
+      "RU": 12,
+      "CN": 25,
       "IQ": 0,
       "RW": 0,
-      "CD": 17,
+      "CD": 16,
       "BG": 0,
       "VE": 5,
-      "UA": 0,
+      "UA": 5,
       "JP": 5,
       "YE": 0,
       "SY": 5,
-      "GN": 27,
+      "GN": 25,
       "ML": 0,
       "NE": 5,
       "CO": 5,
-      "SD": 9,
-      "LY": 0,
+      "SD": 12,
+      "LY": 5,
       "MM": 0
     }
   },
   "sources": {
     "wire": {
-      "HU": [
-        "AP",
-        "BBC",
-        "Reuters"
-      ],
-      "UA": [
-        "AFP",
-        "AP",
-        "Al Jazeera",
-        "BBC",
-        "Reuters"
-      ],
       "RU": [
         "AP",
         "Al Jazeera",
@@ -88,9 +77,15 @@
         "BBC",
         "Reuters"
       ],
-      "CN": [
+      "HU": [
+        "AP",
+        "BBC",
+        "Reuters"
+      ],
+      "UA": [
         "AFP",
         "AP",
+        "Al Jazeera",
         "BBC",
         "Reuters"
       ],
@@ -114,17 +109,18 @@
       "IN": [
         "AP",
         "Al Jazeera",
+        "BBC",
+        "Reuters"
+      ],
+      "CN": [
+        "AFP",
+        "AP",
+        "BBC",
         "Reuters"
       ],
       "PK": [
         "AFP",
         "AP"
-      ],
-      "CU": [
-        "AP",
-        "Al Jazeera",
-        "BBC",
-        "Reuters"
       ],
       "AF": [
         "AFP",
@@ -142,7 +138,13 @@
       ],
       "PS": [
         "AFP",
+        "AP",
         "Al Jazeera",
+        "Reuters"
+      ],
+      "CU": [
+        "Al Jazeera",
+        "BBC",
         "Reuters"
       ],
       "TR": [
@@ -150,12 +152,18 @@
         "Reuters"
       ],
       "US": [
+        "AFP",
         "Al Jazeera",
         "BBC",
         "Reuters"
       ],
       "CA": [
         "AFP",
+        "Reuters"
+      ],
+      "GB": [
+        "Al Jazeera",
+        "BBC",
         "Reuters"
       ]
     },
@@ -308,61 +316,63 @@
     }
   },
   "composite": {
-    "LK": 13,
-    "KW": 46,
-    "IR": 100,
-    "UA": 77,
-    "IL": 52,
+    "UA": 79,
+    "GN": 56,
+    "PS": 31,
+    "CO": 15,
     "OM": 15,
-    "NE": 15,
-    "SD": 30,
-    "CN": 71,
-    "PS": 27,
-    "CU": 30,
-    "PK": 13,
-    "CD": 46,
+    "CU": 13,
     "SY": 15,
-    "AR": 39,
-    "AE": 30,
-    "GN": 58,
     "RU": 72,
     "FR": 0,
-    "US": 91,
-    "CO": 15,
+    "NE": 15,
     "VE": 26,
-    "IN": 27,
-    "CL": 15,
     "JP": 15,
-    "LB": 33,
-    "AZ": 15
+    "IR": 100,
+    "LK": 13,
+    "CL": 15,
+    "CD": 44,
+    "AR": 37,
+    "US": 93,
+    "AE": 30,
+    "IN": 21,
+    "CN": 70,
+    "AZ": 15,
+    "IL": 54,
+    "LY": 15,
+    "KW": 44,
+    "SD": 37,
+    "PK": 13,
+    "LB": 36
   },
   "scores": {
-    "LK": 13,
-    "KW": 46,
-    "IR": 100,
-    "UA": 77,
-    "IL": 52,
+    "UA": 79,
+    "GN": 56,
+    "PS": 31,
+    "CO": 15,
     "OM": 15,
-    "NE": 15,
-    "SD": 30,
-    "CN": 71,
-    "PS": 27,
-    "CU": 30,
-    "PK": 13,
-    "CD": 46,
+    "CU": 13,
     "SY": 15,
-    "AR": 39,
-    "AE": 30,
-    "GN": 58,
     "RU": 72,
     "FR": 0,
-    "US": 91,
-    "CO": 15,
+    "NE": 15,
     "VE": 26,
-    "IN": 27,
-    "CL": 15,
     "JP": 15,
-    "LB": 33,
-    "AZ": 15
+    "IR": 100,
+    "LK": 13,
+    "CL": 15,
+    "CD": 44,
+    "AR": 37,
+    "US": 93,
+    "AE": 30,
+    "IN": 21,
+    "CN": 70,
+    "AZ": 15,
+    "IL": 54,
+    "LY": 15,
+    "KW": 44,
+    "SD": 37,
+    "PK": 13,
+    "LB": 36
   }
 }
