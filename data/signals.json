@@ -1,24 +1,20 @@
 {
-  "updated": "2026-03-11T23:52:33.341908+00:00",
+  "updated": "2026-03-12T02:22:25.367297+00:00",
   "layers": {
     "wire": {
       "IR": 100,
+      "GE": 0,
+      "RU": 18,
       "CD": 0,
-      "RU": 23,
       "AU": 0,
       "LB": 13,
       "IL": 60,
-      "US": 0,
-      "GE": 0,
       "GB": 7,
-      "CN": 36,
-      "ZA": 0,
-      "UA": 13,
-      "QA": 0,
-      "IQ": 13,
-      "VE": 0,
-      "IN": 0,
-      "PS": 0
+      "CN": 27,
+      "UA": 0,
+      "QA": 7,
+      "IQ": 0,
+      "ZA": 0
     },
     "think_tank": {
       "IR": 100,
@@ -32,31 +28,31 @@
     "government": {
       "TN": 0,
       "US": 100,
-      "AE": 13,
-      "FR": 9,
+      "AE": 14,
+      "FR": 10,
       "GB": 0,
-      "IR": 45,
+      "IR": 50,
       "SA": 0,
-      "AF": 20,
+      "AF": 22,
       "IQ": 0,
-      "CL": 9,
+      "CL": 10,
       "IL": 0,
       "KW": 0,
       "OM": 0,
-      "RU": 9,
-      "SD": 17,
-      "CD": 13,
+      "RU": 10,
+      "SD": 14,
+      "CD": 14,
       "BG": 0,
       "VE": 0,
       "UA": 0,
-      "CN": 23,
-      "GN": 26,
+      "CN": 25,
       "YE": 0,
       "SY": 0,
+      "GN": 28,
       "ML": 0,
       "NE": 5,
-      "CO": 5,
-      "LY": 5,
+      "CO": 0,
+      "LY": 0,
       "MM": 0
     }
   },
@@ -69,12 +65,15 @@
         "BBC",
         "Reuters"
       ],
-      "CD": [
+      "GE": [
+        "AP"
+      ],
+      "RU": [
         "AP",
         "BBC",
         "Reuters"
       ],
-      "RU": [
+      "CD": [
         "AP",
         "BBC",
         "Reuters"
@@ -94,14 +93,6 @@
         "BBC",
         "Reuters"
       ],
-      "US": [
-        "AFP",
-        "AP"
-      ],
-      "GE": [
-        "AP",
-        "BBC"
-      ],
       "GB": [
         "AP",
         "Al Jazeera",
@@ -111,11 +102,6 @@
       "CN": [
         "AFP",
         "AP",
-        "BBC",
-        "Reuters"
-      ],
-      "ZA": [
-        "Al Jazeera",
         "BBC",
         "Reuters"
       ],
@@ -130,21 +116,14 @@
         "Reuters"
       ],
       "IQ": [
-        "AFP",
         "Al Jazeera",
         "BBC",
         "Reuters"
       ],
-      "VE": [
-        "Reuters"
-      ],
-      "IN": [
+      "ZA": [
+        "Al Jazeera",
         "BBC",
         "Reuters"
-      ],
-      "PS": [
-        "AFP",
-        "BBC"
       ]
     },
     "think_tank": {
@@ -261,13 +240,13 @@
         "State Dept Sec Remarks",
         "State Dept Travel Advisories"
       ],
-      "GN": [
-        "State Dept Travel Advisories"
-      ],
       "YE": [
         "State Dept Travel Advisories"
       ],
       "SY": [
+        "State Dept Travel Advisories"
+      ],
+      "GN": [
         "State Dept Travel Advisories"
       ],
       "ML": [
@@ -288,47 +267,43 @@
     }
   },
   "composite": {
-    "AE": 40,
-    "AF": 51,
-    "CO": 17,
+    "RU": 71,
     "TR": 30,
-    "NE": 17,
-    "SD": 47,
-    "IQ": 14,
-    "RU": 72,
-    "GN": 57,
-    "LB": 14,
-    "IL": 60,
-    "IR": 100,
-    "LY": 17,
-    "US": 91,
-    "CL": 31,
-    "CD": 40,
+    "GN": 59,
+    "FR": 34,
+    "UA": 67,
+    "QA": 0,
+    "CL": 34,
+    "SD": 42,
+    "IL": 59,
     "GB": 0,
-    "CN": 70,
-    "UA": 70,
-    "FR": 31
+    "LB": 14,
+    "CN": 69,
+    "AF": 53,
+    "US": 90,
+    "AE": 42,
+    "CD": 42,
+    "NE": 17,
+    "IR": 100
   },
   "scores": {
-    "AE": 40,
-    "AF": 51,
-    "CO": 17,
+    "RU": 71,
     "TR": 30,
-    "NE": 17,
-    "SD": 47,
-    "IQ": 14,
-    "RU": 72,
-    "GN": 57,
-    "LB": 14,
-    "IL": 60,
-    "IR": 100,
-    "LY": 17,
-    "US": 91,
-    "CL": 31,
-    "CD": 40,
+    "GN": 59,
+    "FR": 34,
+    "UA": 67,
+    "QA": 0,
+    "CL": 34,
+    "SD": 42,
+    "IL": 59,
     "GB": 0,
-    "CN": 70,
-    "UA": 70,
-    "FR": 31
+    "LB": 14,
+    "CN": 69,
+    "AF": 53,
+    "US": 90,
+    "AE": 42,
+    "CD": 42,
+    "NE": 17,
+    "IR": 100
   }
 }
